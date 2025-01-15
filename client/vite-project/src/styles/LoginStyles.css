@@ -1,0 +1,48 @@
+/* .login-container{
+    width: 100%;
+    padding: 0%;
+    overflow-y: hidden;
+} */
+.login-left{
+    width: 50%;
+    height: 100vh;
+    /* margin-top: 80px;
+    margin-left: 50px; */
+}
+.login-card{
+    margin: 50px;
+    padding: 10%;
+}
+
+#login-btn{
+    width: 100%;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    background-color: #FF4F4F;
+}
+
+#singup-link{
+    color: #FF4F4F;;
+}
+.login-right{
+    width: 50%;
+    background-color: #E580724D;
+    height: 100vh;  
+}
+
+@media (max-width: 780px){
+    .login-right {
+        display: none;
+    } 
+
+    .login-left{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .login-card{
+        margin: 20px;
+        padding: 0%
+    }
+}
+
