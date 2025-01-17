@@ -1,0 +1,12 @@
+.signup-container{
+    padding-top: 8%;
+    width: 40%;
+    height: 100vh;
+}
+
+@media (max-width: 780px){
+    .signup-container{
+        padding-top: 8%;
+        width: 75%;
+    }
+}
