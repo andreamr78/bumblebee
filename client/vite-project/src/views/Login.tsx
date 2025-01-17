@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import logo from '../assets/Logo.svg'
 import '../styles/LoginStyles.css'
@@ -15,7 +15,7 @@ function Login() {
                 <p>Log in to swipe left and right your favorite movies!</p>
 
                 <Form>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="formBasicUsername">
                         <Form.Label>Username</Form.Label>
                         <Form.Control type="username" placeholder="Enter email" />
                     </Form.Group>

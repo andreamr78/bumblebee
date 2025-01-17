@@ -1,0 +1,29 @@
+.sidebar{
+    height: 100%; /* Full-height: remove this if you want "auto" height */
+    width: 200px; /* Set the width of the sidebar */
+    position: fixed;
+    margin:25px ;
+    border-right: 0.1rem grey solid;
+}
+.topbar-full-view{
+    margin-left: 225px;
+    border-left: 0.1rem grey solid;
+}
+
+.topbar-mobile-view{
+ display:none;
+}
+
+@media (max-width: 780px){
+    .topbar-full-view{
+        display:none;
+    }
+    
+    .topbar-mobile-view{
+     display: contents;
+    }
+
+    .sidebar{
+        display: none;
+    }
+}
