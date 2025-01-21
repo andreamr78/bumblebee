@@ -10,8 +10,8 @@ function Dashboard() {
     <div>
        <div className="dashboard-container">
           <Row>
-            <Col className="sidebar-col" sm={2}><Sidebar/></Col>
-            <Col className="topbar-col" sm={10}> <Topbar name={'Mike'}/></Col>
+            <Col className="sidebar-col" lg={2}><Sidebar/></Col>
+            <Col className="topbar-col" sm={12} lg={10}> <Topbar name={'Mike'}/></Col>
           </Row>
         </div>
     </div>
