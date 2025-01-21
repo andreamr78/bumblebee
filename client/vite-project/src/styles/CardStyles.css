@@ -1,0 +1,45 @@
+.like {
+    background-color: white;
+    border-color: rgb(231, 231, 231);
+    border-radius: 100%;
+    height: 72px;
+    width: 72px;
+}
+
+#cross:hover {
+    background-color: #ffa4a4;
+    color: white;
+    border-color: rgb(231, 231, 231);
+}
+
+#check:hover {
+    background-color: #bcfbd3;
+    color: white;
+    border-color: rgb(231, 231, 231);
+}
+
+.bi-x-lg {
+    font-size: 2.5rem;
+    color: #FF4F4F;
+}
+
+.bi-check-lg {
+    font-size: 2.5rem;
+    color: #2fa159;
+}
+
+.card {
+    border-color: white;
+}
+
+.watched {
+    background-color: #ffffff;
+    border-color: #FF4F4F;
+    color: #FF4F4F;
+}
+
+.watched:hover {
+    background-color: #FF4F4F;
+    color: white;
+    border-color: #FF4F4F;
+}
