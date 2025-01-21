@@ -7,7 +7,7 @@ import '../styles/ComponentsStyles.css'
 function Topbar(props:any) {
   return (
     <div>
-        <Container className="topbar-full-view">
+        <Container className="topar-full-view">
             <Navbar className=" justify-content-between topbar-style">
                 <Navbar.Brand href="/"  id="welcome-text">Welcome <a href="">{props.name}</a> </Navbar.Brand>
                 <button id="swipe-button">Start swiping!</button>
