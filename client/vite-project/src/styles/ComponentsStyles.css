@@ -1,15 +1,74 @@
-.sidebar{
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 200px; /* Set the width of the sidebar */
-    position: fixed;
-    margin:25px ;
-    border-right: 0.1rem grey solid;
+.dashboard-container{
+    padding: 0%;
+    height: 100vh;
+    overflow-x: hidden;
 }
-.topbar-full-view{
-    margin-left: 225px;
-    border-left: 0.1rem grey solid;
+.sidebar{
+    height: 100vh; /* Full-height: remove this if you want "auto" height */
+    width: 230px; /* Set the width of the sidebar */
+    /* position: fixed; */
+    /* margin:25px ; */
+    border-right: 0.1rem lightgray solid;
+    position: sticky;
+
+}
+.sidebar-col{
+    width: 17%;
 }
 
+.topbar-col{
+    width: 83%;
+
+}
+.topbar-full-view{
+    /* margin-left: 225px; */
+    /* border-left: 0.1rem grey solid; */
+    background-color: white;
+    margin-top: 3%;
+    /* margin-left: 20px; */
+ 
+}
+
+#welcome-text{
+    margin-left: 50px;
+}
+
+#welcome-text a{
+    color: #FF4F4F;
+    text-decoration: none;
+}
+
+#swipe-button{
+    background-color: #FF4F4F;
+    width: 200px;
+    height: 40px;
+    border-radius: 8px;
+    color: white;
+    border: solid 0px white
+}
+
+.inside-sidebar img{
+    margin: 30px;
+}
+
+.inside-sidebar h1{
+    margin: 10px;
+    padding-bottom: 30px;
+}
+.sidebar-links{
+    margin: 15px;
+}
+
+.sidebar-links a{
+    color: black;
+    text-decoration: none;
+}
+.sidebar-links a:hover{
+    padding-top: 3px;
+    text-decoration: underline;
+    text-decoration-color: #FF4F4F;
+    text-decoration-thickness: 4px;
+}
 .topbar-mobile-view{
  display:none;
 }
@@ -18,7 +77,7 @@
     .topbar-full-view{
         display:none;
     }
-    
+
     .topbar-mobile-view{
      display: contents;
     }
