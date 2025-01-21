@@ -7,26 +7,27 @@ import '../styles/ComponentsStyles.css'
 function Topbar(props:any) {
   return (
     <div>
-        <Container className="topbar-full-view">
+        <Container className="topbar-full-view"  fluid>
             <Navbar className=" justify-content-between topbar-style">
                 <Navbar.Brand href="/"  id="welcome-text">Welcome <a href="">{props.name}</a> </Navbar.Brand>
                 <button id="swipe-button">Start swiping!</button>
             </Navbar>
       </Container> 
       
-    <Container className="topbar-mobile-view">
-        <Navbar key='sm' expand='sm'  className="bg-body-tertiary justify-content-between">
+    <Container className="topbar-mobile-view" fluid>
+        <Navbar key='sm' expand='sm'  className="topbar justify-content-between">
           <Navbar.Brand href="/">
-            <img src={logo} alt="" />
-            Welcome {props.name}
+            <p id="home-icon"> <img src={logo} alt="" />  Welcome <a href="">{props.name}</a></p>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls='offcanvasNavbar-expand-sm'/>
-            <Navbar.Offcanvas placement="end">
+            <Navbar.Toggle aria-controls='offcanvasNavbar-expand-sm' id="mobile-toggle"/>
+            <Navbar.Offcanvas placement="end" id='canvas-body'>
               <Offcanvas.Header closeButton></Offcanvas.Header>
-              <Offcanvas.Body>
-                <Link to="/">All</Link>
-                <Link to="/">Watched</Link>
-                <Link to="/">Log Out</Link>
+              <Offcanvas.Body >
+                <div id="canvas-links">
+                  <p><Link to="/">All</Link></p>
+                  <p><Link to="/">Watched</Link></p>
+                  <p id="logout"><Link to="/"><i className="bi bi-door-open"></i> Log Out</Link></p>
+                </div>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
             </Navbar>

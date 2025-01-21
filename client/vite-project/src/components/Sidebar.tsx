@@ -11,7 +11,7 @@ function Sidebar() {
         <div className='sidebar-links'>
             <p><Link to="/">All</Link></p>
             <p><Link to="/">Watched</Link></p>
-            <p><Link to="/">Log Out</Link></p>
+            <p id='logout'><Link to="/"><i className="bi bi-door-open"></i>Log Out</Link></p>
           </div>
         </div>
     </div>
