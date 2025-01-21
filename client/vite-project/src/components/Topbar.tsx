@@ -8,9 +8,9 @@ function Topbar(props:any) {
   return (
     <div>
         <Container className="topbar-full-view">
-            <Navbar className="bg-body-tertiary justify-content-between">
-                <Navbar.Brand href="/">Welcome {props.name}</Navbar.Brand>
-                <Button href="">Start swiping!</Button>
+            <Navbar className=" justify-content-between topbar-style">
+                <Navbar.Brand href="/"  id="welcome-text">Welcome <a href="">{props.name}</a> </Navbar.Brand>
+                <button id="swipe-button">Start swiping!</button>
             </Navbar>
       </Container> 
       

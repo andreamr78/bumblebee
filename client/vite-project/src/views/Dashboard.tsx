@@ -1,12 +1,19 @@
 // import React from 'react'
+import Row from "react-bootstrap/esm/Row"
 import Sidebar from "../components/Sidebar"
 import Topbar from "../components/Topbar"
+import { Container, Col } from "react-bootstrap"
+import '../styles/ComponentsStyles.css'
 
 function Dashboard() {
   return (
     <div>
-        <Topbar name={'Mike'}/>
-        <Sidebar/>
+       <div className="dashboard-container">
+          <Row>
+            <Col className="sidebar-col" sm={2}><Sidebar/></Col>
+            <Col className="topbar-col" sm={10}> <Topbar name={'Mike'}/></Col>
+          </Row>
+        </div>
     </div>
   )
 }
