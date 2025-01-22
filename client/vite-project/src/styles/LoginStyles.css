@@ -19,15 +19,22 @@
     margin-top: 35px;
     margin-bottom: 15px;
     background-color: #FF4F4F;
+    border-color: #FF4F4F;
 }
 
-#singup-link{
-    color: #FF4F4F;;
+#signup-link{
+    text-decoration: none;
+    color: #FF4F4F;
 }
+
 .login-right{
     width: 50%;
     background-color: #E580724D;
     height: 100vh;  
+}
+
+#hero-img{
+   height: 70vh;
 }
 
 @media (max-width: 780px){
@@ -45,4 +52,5 @@
         padding: 0%
     }
 }
+
 

@@ -5,7 +5,8 @@
 }
 .sidebar{
     height: 100vh; /* Full-height: remove this if you want "auto" height */
-    width: 230px; /* Set the width of the sidebar */
+    max-width: 100%;
+    /* width: 230px; Set the width of the sidebar */
     /* position: fixed; */
     /* margin:25px ; */
     border-right: 0.1rem lightgray solid;
@@ -13,20 +14,22 @@
 
 }
 .sidebar-col{
-    width: 17%;
+    width: 15%;
+    padding-left: 2%;
+    min-width: 280px
 }
 
 .topbar-col{
-    width: 83%;
-
+    /* width: 85%; */
+    min-width: 30%;
 }
+
 .topbar-full-view{
     /* margin-left: 225px; */
     /* border-left: 0.1rem grey solid; */
     background-color: white;
     margin-top: 3%;
     /* margin-left: 20px; */
- 
 }
 
 #welcome-text{
@@ -37,6 +40,7 @@
     color: #FF4F4F;
     text-decoration: none;
 }
+
 
 #swipe-button{
     background-color: #FF4F4F;
@@ -57,17 +61,20 @@
     padding-bottom: 30px;
 }
 .sidebar-links{
+    /* justify-content: space-between; */
     margin: 15px;
 }
 #logout{
-    margin-top: 150%;
-    margin-left: 35%;
+    margin-top: 70vh;
+    color: gray;
+    font-size: .9rem;
+    /* margin-left: 35%; */
 }
 
 #logout a{
     /* margin-bottom: 80px; */
     color: gray;
-    font-size: 10px;
+    font-size: .9rem;
 }
 
 #logout a:hover{
@@ -108,7 +115,7 @@
     }
 
     .sidebar-col{
-        width: 0%;
+        display: none;
     }
     #canvas-body{
         max-height: 100%;
@@ -137,6 +144,10 @@
         margin-right: 60px;
     }
 
+    #canvas-links{
+        margin-top: 80px;
+    }
+
     #canvas-links p a{
         color: black;
         text-decoration: none;
@@ -148,5 +159,9 @@
 
     #canvas-links #logout-mobile {
         color: #FF4F4F;
+    }
+
+    #mobile-toggle {
+        margin-right: 20px;
     }
 }
