@@ -3,10 +3,11 @@ import Modal from 'react-bootstrap/Modal';
 
 interface PopupProps {
   show: boolean;
+  props: any;
   handleClose: () => void;
 }
 
-function Popup({ show, handleClose }: PopupProps) {
+function Popup({ show, handleClose, props }: PopupProps) {
 
   return (
     <>
@@ -14,9 +15,8 @@ function Popup({ show, handleClose }: PopupProps) {
         <Modal.Header closeButton>
         </Modal.Header>
         <Modal.Body>
-        <h4>Transformers</h4>
-        <h6>2010</h6>
-        <p>Action</p>
+          <h1>{props.title}</h1>
+        <p>{props.overview}</p>
         Woohoo, you are reading this text in a modal!</Modal.Body>
       </Modal>
     </>
