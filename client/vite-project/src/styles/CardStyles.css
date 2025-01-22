@@ -43,3 +43,12 @@
     color: white;
     border-color: #FF4F4F;
 }
+
+#bio {
+    text-decoration: none;
+    color: #FF4F4F;
+    font-weight: 400;
+    font-size: 14px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
