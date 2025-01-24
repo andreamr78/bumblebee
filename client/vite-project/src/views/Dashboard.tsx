@@ -15,8 +15,7 @@ function Dashboard() {
        <div className="dashboard-container">
           <Row>
             <Col className="sidebar-col" lg={2}><Sidebar/></Col>
-            <Col className="topbar-col" sm={12} lg={10}> 
-            <Topbar name={'Mike'}/>
+            <Col className="topbar-col"> <Topbar name={'Mike'}/></Col>
              <div className="content-div d-flex justify-content-center h-75 align-items-center">
               <div>
                 <p>No Likes yet?</p>
