@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-//import TransformersTest from '../assets/TransformersTest.jpg'
+// import TransformersTest from '../assets/TransformersTest.jpg'
 import '../styles/CardStyles.css'
 import Popup from './Popup';
 import { useState } from 'react';
@@ -16,14 +16,15 @@ function MovieCard(props:any) {
   const handleShow = () => setShow(true);
 
   return (
-    <Card style={{ width: '18rem' }} className="card shadow-sm rounded-4">
-      <Card.Img variant="top" src={`${baseImgUrl}/${size}${props.props.backdrop_path}`} />
+
+    <Card style={{ width: '18rem' }} className="rounded-4">
+      <Card.Img variant="top" src={`${baseImgUrl}/${size}${props.props.poster_path}`} />
       <Card.Body>
         <Card.Title className="d-flex justify-content-center">
           {props.props.title}
         </Card.Title>
         <Card.Text className="d-flex justify-content-center">
-        {props.props.release_date}
+        {props.props.release_date?.slice(0, 4)}
         </Card.Text>
         <div className="d-flex justify-content-center">
           <Button variant="link" id="bio" onClick={handleShow}>Read Bio</Button>

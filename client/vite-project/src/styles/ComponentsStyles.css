@@ -42,7 +42,7 @@
 }
 
 
-#swipe-button{
+#swipe-button, #swipe-button-mobile {
     background-color: #FF4F4F;
     width: 200px;
     height: 40px;
@@ -64,8 +64,13 @@
     /* justify-content: space-between; */
     margin: 15px;
 }
+
+.logout-container{
+    height: 100%;
+    margin-top: 90%;
+}
+
 #logout{
-    margin-top: 70vh;
     color: gray;
     font-size: .9rem;
     /* margin-left: 35%; */
@@ -75,6 +80,7 @@
     /* margin-bottom: 80px; */
     color: gray;
     font-size: .9rem;
+    display: flex;
 }
 
 #logout a:hover{
@@ -99,6 +105,10 @@
 #swipe-link{
     color: #FF4F4F;
     text-decoration: none;
+}
+
+.swipe-button-mobile button{
+    display: none;
 }
 
 @media (max-width: 800px){
@@ -169,4 +179,17 @@
     #mobile-toggle {
         margin-right: 20px;
     }
+
+    #start-swiping {
+        margin-top: 6rem;
+    }
+
+    .swipe-button-mobile button{
+        display: block;
+    }
+
+    #swipe-button {
+        margin-right: 0px;
+    }
+    
 }
