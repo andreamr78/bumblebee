@@ -11,6 +11,8 @@ function Swipe() {
 
   const [results, setResults] = useState<any>([]);
   const [index, setIndex] = useState(0);
+  const [arrayMoviesLiked, setArrayMoviesLiked] = useState<any>([]);
+  const [arrayMoviesWatched, setArrayMoviesWatched] = useState<any>([]);
 
    const baseImgUrl = "https://image.tmdb.org/t/p"
    const size = "w500"
@@ -41,13 +43,19 @@ function Swipe() {
   };
   const onNextClick = (selectedData: any) => {
     ref.current?.next();
-    console.log(`${baseImgUrl}/${size}${selectedData}`);
+    var moviePoster = `${baseImgUrl}/${size}${selectedData}`;
+    setArrayMoviesLiked([...arrayMoviesLiked, moviePoster]);
+    // console.log(`${baseImgUrl}/${size}${selectedData}`);
   };
 
   const watched = (selectedData: any) => {
     ref.current?.next();
-    console.log(`${baseImgUrl}/${size}${selectedData}`);
+    var moviePoster = `${baseImgUrl}/${size}${selectedData}`;
+    setArrayMoviesWatched([...arrayMoviesWatched, moviePoster]);
+    // console.log(`${baseImgUrl}/${size}${selectedData}`);
   }
+  localStorage.setItem('movieposterLike', JSON.stringify(arrayMoviesLiked));
+  localStorage.setItem('movieposterWatched', JSON.stringify(arrayMoviesWatched));
 
   return (
     <div>
@@ -57,7 +65,7 @@ function Swipe() {
       </div>
       <div className="d-flex justify-content-center">  
 
-    <Carousel ref={ref} activeIndex={index} onSelect={handleSelect} indicators={false}  controls={false}>
+    <Carousel ref={ref} activeIndex={index} onSelect={handleSelect} indicators={false}  controls={false} interval={null}>
          {results.map((result: any, i: Key | null | undefined) => {
           return(
             <Carousel.Item key={i}>
@@ -67,12 +75,12 @@ function Swipe() {
                 <Button className="like" id="cross" onClick={onPrevClick}>
                   <i className="bi bi-x-lg"></i>
                 </Button>
-                <Button className="like" id="check" onClick={() => onNextClick(result.backdrop_path)}>
+                <Button className="like" id="check" onClick={() => onNextClick(result.poster_path)}>
                   <i className="bi bi-check-lg"></i>
                 </Button>
               </div>
               <div className="d-flex justify-content-center mt-4 mb-4">
-              <Button variant="outline-primary" className="watched" onClick={() => watched(result.backdrop_path)}>
+              <Button variant="outline-primary" className="watched" onClick={() => watched(result.poster_path)}>
                 Mark as watched
                 <i className="bi bi-eye ms-2"></i>
               </Button>
