@@ -10,11 +10,17 @@ function Signup() {
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
+    const requestBody = { username, email, password };
+    console.log('Request Body:', requestBody);
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/signup', { username, email, password });
+      const response = await axios.post('http://localhost:3001/api/auth/signup', requestBody);
       alert(response.data.message);
     } catch (error) {
-      console.error(error);
+      if (axios.isAxiosError(error) && error.response) {
+        alert(error.response.data.message);
+      } else {
+        console.error(error);
+      }
     }
   };
 

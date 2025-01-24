@@ -5,8 +5,8 @@ import Topbar from "../components/Topbar"
 import { Col } from "react-bootstrap"
 import '../styles/ComponentsStyles.css'
 import { Link } from "react-router-dom"
-import MovieApi from "../api/MovieApi"
-import { useEffect, useState } from "react"
+//import MovieApi from "../api/MovieApi"
+//import { useEffect, useState } from "react"
 
 function Dashboard() {
 
@@ -15,7 +15,7 @@ function Dashboard() {
        <div className="dashboard-container">
           <Row>
             <Col className="sidebar-col" lg={2}><Sidebar/></Col>
-            <Col className="topbar-col"> <Topbar name={'Mike'}/></Col>
+            <Col className="topbar-col"> <Topbar name={'Mike'}/>
              <div className="content-div d-flex justify-content-center h-75 align-items-center">
               <div>
                 <p>No Likes yet?</p>

@@ -14,7 +14,7 @@ function Login() {
     try {
       const response = await axios.post('http://localhost:3001/api/auth/login', { email, password });
       console.log(response.data);
-      localStorage.setItem('token', response.data.token);
+      localStorage.setItem('token', JSON.stringify(response.data.token));
     } catch (error) {
       console.error(error);
     }
