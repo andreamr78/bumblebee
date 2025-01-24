@@ -16,7 +16,7 @@ function Popup({ show, handleClose, props }: PopupProps) {
         </Modal.Header>
         <Modal.Body>
           <h4>{props.title}</h4>
-          <p>{props.release_date}</p>
+          <p>{props.release_date?.slice(0, 4)}</p>
           <p>{props.overview}</p>
         </Modal.Body>
       </Modal>
