@@ -16,6 +16,7 @@ function MovieCard(props:any) {
   const handleShow = () => setShow(true);
 
   return (
+
     <Card style={{ width: '18rem' }} className="rounded-4">
       <Card.Img variant="top" src={`${baseImgUrl}/${size}${props.props.poster_path}`} />
       <Card.Body>

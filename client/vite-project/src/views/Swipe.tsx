@@ -11,6 +11,8 @@ function Swipe() {
 
   const [results, setResults] = useState<any>([]);
   const [index, setIndex] = useState(0);
+  const [arrayMoviesLiked, setArrayMoviesLiked] = useState<any>([]);
+  const [arrayMoviesWatched, setArrayMoviesWatched] = useState<any>([]);
 
    const baseImgUrl = "https://image.tmdb.org/t/p"
    const size = "w500"
@@ -41,14 +43,20 @@ function Swipe() {
   };
   const onNextClick = (selectedData: any) => {
     ref.current?.next();
-    console.log(`${baseImgUrl}/${size}${selectedData}`);
+    var moviePoster = `${baseImgUrl}/${size}${selectedData}`;
+    setArrayMoviesLiked([...arrayMoviesLiked, moviePoster]);
+    // console.log(`${baseImgUrl}/${size}${selectedData}`);
   };
 
   const watched = (selectedData: any) => {
     ref.current?.next();
-    console.log(`${baseImgUrl}/${size}${selectedData}`);
+    var moviePoster = `${baseImgUrl}/${size}${selectedData}`;
+    setArrayMoviesWatched([...arrayMoviesWatched, moviePoster]);
+    // console.log(`${baseImgUrl}/${size}${selectedData}`);
   }
-  
+
+  localStorage.setItem('movieposterLike', JSON.stringify(arrayMoviesLiked));
+  localStorage.setItem('movieposterWatched', JSON.stringify(arrayMoviesWatched));
 
   return (
     <div>

@@ -15,7 +15,7 @@ function Topbar(props:any) {
                 <Navbar.Brand href="/">  
                   <h4 id="welcome-text">Welcome <a href="">{props.name}</a></h4>
                 </Navbar.Brand>
-                <button id="swipe-button">Start swiping! <i className="bi bi-arrow-right"></i></button>
+                <button id="swipe-button"><a href="/swipe">Start swiping!</a> <i className="bi bi-arrow-right"></i></button>
             </Navbar>
       </Container> 
       
@@ -35,8 +35,8 @@ function Topbar(props:any) {
               <Offcanvas.Header closeButton></Offcanvas.Header>
               <Offcanvas.Body >
                 <div id="canvas-links">
-                  <p><Link to="/">Liked</Link></p>
-                  <p><Link to="/">Watched</Link></p>
+                <p><Link to="/dashboard">Liked</Link></p>
+                <p><Link to="/watched">Watched</Link></p>
                   <p id="logout"><Link to="/"><i className="bi bi-door-open"></i> Log Out</Link></p>
                 </div>
               </Offcanvas.Body>
