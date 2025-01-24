@@ -17,7 +17,7 @@ function MovieCard(props:any) {
 
   return (
 
-    <Card style={{ width: '18rem' }} className="card shadow-sm rounded-4">
+    <Card style={{ width: '18rem' }} className="card rounded-4">
       <Card.Img variant="top" src={`${baseImgUrl}/${size}${props.props.poster_path}`} />
 
       <Card.Body>
