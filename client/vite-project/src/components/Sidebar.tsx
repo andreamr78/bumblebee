@@ -10,8 +10,8 @@ function Sidebar() {
         <h1>Cinematch</h1>
         <div className='sidebar-links d-flex flex-column mt-5'>
             <div>
-              <p><Link to="/">Liked</Link></p>
-              <p><Link to="/">Watched</Link></p>
+              <p><Link to="/dashboard">Liked</Link></p>
+              <p><Link to="/watched">Watched</Link></p>
             </div>
             <div className='logout-container'>
             <p id='logout' className="logout-container">
