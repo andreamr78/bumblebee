@@ -1,5 +1,5 @@
 // import React from 'react'
-import { Navbar, Container, Button, Offcanvas } from "react-bootstrap"
+import { Navbar, Container, Offcanvas } from "react-bootstrap"
 import logo from '../assets/Logo.svg'
 import { Link } from "react-router-dom"
 import '../styles/ComponentsStyles.css'
@@ -12,7 +12,7 @@ function Topbar(props:any) {
                 <Navbar.Brand href="/">  
                   <h4 id="welcome-text">Welcome <a href="">{props.name}</a></h4>
                 </Navbar.Brand>
-                <button id="swipe-button">Start swiping!</button>
+                <button id="swipe-button">Start swiping! <i className="bi bi-arrow-right"></i></button>
             </Navbar>
       </Container> 
       
