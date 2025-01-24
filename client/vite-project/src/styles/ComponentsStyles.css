@@ -96,6 +96,11 @@
  display:none;
 }
 
+#swipe-link{
+    color: #FF4F4F;
+    text-decoration: none;
+}
+
 @media (max-width: 800px){
     .topbar-full-view{
         display:none;
