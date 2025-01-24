@@ -1,6 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import TransformersTest from '../assets/TransformersTest.jpg'
+// import TransformersTest from '../assets/TransformersTest.jpg'
 import '../styles/CardStyles.css'
 import Popup from './Popup';
 import { useState } from 'react';
@@ -16,7 +16,7 @@ function MovieCard(props:any) {
   const handleShow = () => setShow(true);
 
   return (
-    <Card style={{ width: '18rem' }} className="card shadow-sm rounded-4">
+    <Card style={{ width: '18rem' }} className="">
       <Card.Img variant="top" src={`${baseImgUrl}/${size}${props.props.backdrop_path}`} />
       <Card.Body>
         <Card.Title className="d-flex justify-content-center">
