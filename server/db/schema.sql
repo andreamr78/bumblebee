@@ -2,6 +2,8 @@ DROP DATABASE IF EXISTS user_db;
 
 CREATE DATABASE user_db;
 
+\c user_db;
+
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (

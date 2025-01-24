@@ -10,7 +10,6 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import MainMovieCard from "../components/MainMovieCard"
 
-
 function Dashboard() {
   //  const [name, setName] = useState<any>();
   const [movieLike, setMovieLike] = useState([])
