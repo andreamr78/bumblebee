@@ -8,6 +8,7 @@ import '../styles/LoginStyles.css';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [loginState, setLoginState] = useState<any>();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -42,7 +43,7 @@ function Login() {
                 </Form.Group>
 
                 <Button id='login-btn' type="submit">
-                  Log in
+                 <a href={ loginState  == 'Login successful' ? '/dashboard' : '/signup'}>Log in</a>
                 </Button>
               </Form>
               

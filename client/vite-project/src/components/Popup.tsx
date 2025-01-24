@@ -15,9 +15,10 @@ function Popup({ show, handleClose, props }: PopupProps) {
         <Modal.Header closeButton>
         </Modal.Header>
         <Modal.Body>
-          <h1>{props.title}</h1>
-        <p>{props.overview}</p>
-        Woohoo, you are reading this text in a modal!</Modal.Body>
+          <h4>{props.title}</h4>
+          <p>{props.release_date?.slice(0, 4)}</p>
+          <p>{props.overview}</p>
+        </Modal.Body>
       </Modal>
     </>
   );
