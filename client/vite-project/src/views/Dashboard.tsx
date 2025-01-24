@@ -10,6 +10,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import MainMovieCard from "../components/MainMovieCard"
 
+
 function Dashboard() {
   //  const [name, setName] = useState<any>();
   const [movieLike, setMovieLike] = useState([])
@@ -49,6 +50,9 @@ function Dashboard() {
                 <Link id="swipe-link" to={'/swipe'}>Start Swiping</Link>
               </div>
               }
+             </div>
+             <div className="swipe-button-mobile fixed-bottom d-flex justify-content-center align-items-center mb-3">
+              <button id="swipe-button">Start swiping! <i className="bi bi-arrow-right"></i></button>
              </div>
             </Col>
           </Row>

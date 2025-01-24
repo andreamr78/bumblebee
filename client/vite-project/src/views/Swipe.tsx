@@ -65,12 +65,11 @@ function Swipe() {
       </div>
       <div className="d-flex justify-content-center">  
 
-    <Carousel ref={ref} activeIndex={index} onSelect={handleSelect} indicators={false}  controls={false} interval={null}>
+    <Carousel ref={ref} activeIndex={index} onSelect={handleSelect} indicators={false}  controls={false} interval={null} className='card shadow-sm rounded-4'>
          {results.map((result: any, i: Key | null | undefined) => {
           return(
             <Carousel.Item key={i}>
                <MovieCard props={result}/>
-
                <div className="d-flex justify-content-center gap-4">
                 <Button className="like" id="cross" onClick={onPrevClick}>
                   <i className="bi bi-x-lg"></i>
