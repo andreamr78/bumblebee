@@ -80,6 +80,7 @@
     /* margin-bottom: 80px; */
     color: gray;
     font-size: .9rem;
+    display: flex;
 }
 
 #logout a:hover{

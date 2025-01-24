@@ -17,15 +17,14 @@ function MovieCard(props:any) {
 
   return (
 
-    <Card style={{ width: '18rem' }} className="card rounded-4">
+    <Card style={{ width: '18rem' }} className="rounded-4">
       <Card.Img variant="top" src={`${baseImgUrl}/${size}${props.props.poster_path}`} />
-
       <Card.Body>
         <Card.Title className="d-flex justify-content-center">
           {props.props.title}
         </Card.Title>
         <Card.Text className="d-flex justify-content-center">
-        {props.props.release_date}
+        {props.props.release_date?.slice(0, 4)}
         </Card.Text>
         <div className="d-flex justify-content-center">
           <Button variant="link" id="bio" onClick={handleShow}>Read Bio</Button>

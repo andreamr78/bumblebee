@@ -54,6 +54,7 @@ function Swipe() {
     setArrayMoviesWatched([...arrayMoviesWatched, moviePoster]);
     // console.log(`${baseImgUrl}/${size}${selectedData}`);
   }
+
   localStorage.setItem('movieposterLike', JSON.stringify(arrayMoviesLiked));
   localStorage.setItem('movieposterWatched', JSON.stringify(arrayMoviesWatched));
 

@@ -14,9 +14,9 @@ function Sidebar() {
               <p><Link to="/watched">Watched</Link></p>
             </div>
             <div className='logout-container'>
-            <p id='logout' className="logout-container">
-              <Link to="/"><i className="bi bi-door-open"></i>Log Out</Link>
-            </p>
+              <p id='logout'>
+                <Link to="/"><i className="bi bi-door-open"></i>Log Out</Link>
+              </p>
             </div>
           </div>
         </div>
