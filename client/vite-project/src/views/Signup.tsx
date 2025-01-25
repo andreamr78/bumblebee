@@ -1,20 +1,25 @@
 import { useState } from 'react';
+import axiosInstance from '../utils/AxiosInstance';
 import axios from 'axios';
 import { Button, Container, Form } from "react-bootstrap";
 import '../styles/SignupStyles.css';
+import { useNavigate } from 'react-router-dom';
 
 function Signup() {
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const navigate = useNavigate();
+
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     const requestBody = { username, email, password };
-    console.log('Request Body:', requestBody);
+    //console.log('Request Body:', requestBody);
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/signup', requestBody);
+      const response = await axiosInstance.post('/auth/signup', requestBody);
       alert(response.data.message);
+      navigate('/');
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
         alert(error.response.data.message);

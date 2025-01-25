@@ -1,21 +1,24 @@
 import { useState } from 'react';
-import axios from 'axios';
+import axiosInstance from '../utils/AxiosInstance';
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import logo from '../assets/Logo.svg';
 import UI_hero from '../assets/UI_Hero.png';
 import '../styles/LoginStyles.css';
+import { useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loginState, setLoginState] = useState<any>();
+  const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3001/api/auth/login', { email, password });
-      //console.log(response.data);
-      localStorage.setItem('token', JSON.stringify(response.data.token));
+      const response = await axiosInstance.post('/auth/login', { email, password });
+      const { token, user } = response.data;
+      localStorage.setItem('token', token);
+      localStorage.setItem('user', JSON.stringify(user));
+      navigate('/dashboard');
     } catch (error) {
       console.error(error);
     }
@@ -43,7 +46,7 @@ function Login() {
                 </Form.Group>
 
                 <Button id='login-btn' type="submit">
-                 <a href={ loginState  == 'Login successful' ? '/dashboard' : '/signup'}>Log in</a>
+                  Log in
                 </Button>
               </Form>
               
