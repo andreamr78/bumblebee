@@ -11,11 +11,12 @@ import { useEffect, useState } from "react"
 import MainMovieCard from "../components/MainMovieCard"
 
 function Dashboard() {
-  //  const [name, setName] = useState<any>();
+   const [name, setName] = useState<any>();
   const [movieLike, setMovieLike] = useState([])
 
   useEffect(() => {
     setMovieLike(JSON.parse(localStorage.getItem('movieposterLike') || '{}'));
+    setName(JSON.parse(localStorage.getItem('user') || '{}'));
   }, [])
 
   // const getUsername = async () => {
@@ -35,7 +36,7 @@ function Dashboard() {
 
             <Col className="sidebar-col" lg={2}><Sidebar/></Col>
 
-            <Col className="topbar-col justify-content-between"> <Topbar name={name}/>
+            <Col className="topbar-col justify-content-between"> <Topbar name={name?.username}/>
              <div className="content-div d-flex h-75 flex-wrap flex-grow-1 overflow-auto" id="dashboard-content">
               {movieLike.length !== 0 ? 
                 movieLike.map((movie, i)=> {

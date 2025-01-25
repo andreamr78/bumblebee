@@ -20,6 +20,7 @@ function Login() {
       localStorage.setItem('user', JSON.stringify(user));
       navigate('/dashboard');
     } catch (error) {
+      alert('Login Invalid');
       console.error(error);
     }
   };
