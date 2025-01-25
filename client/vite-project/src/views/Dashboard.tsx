@@ -5,9 +5,9 @@ import Topbar from "../components/Topbar"
 import { Col } from "react-bootstrap"
 import '../styles/ComponentsStyles.css'
 import { Link } from "react-router-dom"
-import MovieApi from "../api/MovieApi"
+//import MovieApi from "../api/MovieApi"
 import { useEffect, useState } from "react"
-import axios from "axios"
+//import axios from "axios"
 import MainMovieCard from "../components/MainMovieCard"
 
 function Dashboard() {

@@ -13,23 +13,23 @@ class AuthController {
             if (error instanceof Error) {
                 res.status(400).json({ message: error.message });
             } else {
-                res.status(400).json({ message: 'Unknown error occurred' });
+                res.status(400).json({ message: 'Unknown error' });
             }
         }
     }
 
     async login(req: Request, res: Response) {
         try {
-            // tries to log in the user by calling the login method from the AuthService class
+            //tries to log in the user by calling the login method from the AuthService class
             const { email, password } = req.body;
-            const token = await AuthService.login(email, password);
-            res.status(200).json({ message: 'Login successful', token });
+            const { token, user } = await AuthService.login(email, password);
+            res.status(200).json({ message: 'Login successful', token, user });
         } catch (error) {
             // if an error occurs, it sends a 401 status code and a message with the error
             if (error instanceof Error) {
                 res.status(401).json({ message: error.message });
             } else {
-                res.status(401).json({ message: 'Unknown error occurred' });
+                res.status(401).json({ message: 'Unknown error' });
             }
         }
     }
