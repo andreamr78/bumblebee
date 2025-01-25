@@ -2,6 +2,7 @@
     padding: 0%;
     height: 100vh;
     overflow-x: hidden;
+    display: flex;
 }
 .sidebar{
     height: 100vh; /* Full-height: remove this if you want "auto" height */
@@ -11,17 +12,28 @@
     /* margin:25px ; */
     border-right: 0.1rem lightgray solid;
     position: sticky;
-
+    top: 0;
 }
+
 .sidebar-col{
     width: 15%;
     padding-left: 2%;
-    min-width: 280px
+    min-width: 280px;
+    /* height: 100%; */
+    flex-shrink: 0;
 }
 
 .topbar-col{
     /* width: 85%; */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
     min-width: 30%;
+    overflow: hidden;
+}
+
+.topbar-style{
+    width: 80vw;
 }
 
 .topbar-full-view{
@@ -30,6 +42,8 @@
     background-color: white;
     margin-top: 3%;
     /* margin-left: 20px; */
+    position: sticky;
+    top: 0;
 }
 
 #welcome-text{
@@ -44,12 +58,18 @@
 
 #swipe-button, #swipe-button-mobile {
     background-color: #FF4F4F;
+    text-decoration: none;
     width: 200px;
     height: 40px;
     border-radius: 8px;
     color: white;
     border: solid 0px white;
     margin-right: 50px;
+}
+
+#swipe-button a, #swipe-button-mobile a{
+    color: white;
+    text-decoration: none;
 }
 
 .inside-sidebar img{
@@ -85,6 +105,7 @@
 
 #logout a:hover{
     text-decoration: none;
+    font-size: .9rem;
     color: #FF4F4F;
 }
 
@@ -111,6 +132,36 @@
     display: none;
 }
 
+#dashboard-content {
+    margin-left: 50px;
+    margin-top: 24px;
+    padding-right: 50px;
+    gap: 40px;
+    padding-bottom: 20px;
+}
+
+.content-div {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.no-likes {
+    padding-left: 40%;
+}
+
+@media screen and (max-width: 1200px){
+    .topbar-col{
+        width: 100%;
+    }
+    .topbar-style{
+        width: 100%;
+    }
+    
+    .topbar-style{
+        width: 70vw;
+    }
+}
+
 @media (max-width: 800px){
     .topbar-full-view{
         display:none;
@@ -118,11 +169,12 @@
 
     .topbar-mobile-view{
      display: contents;
+     position: sticky;
+     top: 0;
     }
 
     .topbar{
-        width: 100%;
-        margin: 5px;
+        width: 100vw;
     }
 
     .sidebar{
@@ -139,7 +191,7 @@
     
     .topbar-col{
         width: 100%;
-        margin-left: 20px;
+        padding-left: 20px;
     }
 
     #home-icon{
@@ -192,4 +244,15 @@
         margin-right: 0px;
     }
     
+    #dashboard-content {
+        margin-left: 0px;
+        margin-top: 24px;
+        padding-right: 20px;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .no-likes {
+        padding-left: 5%;
+    }
 }

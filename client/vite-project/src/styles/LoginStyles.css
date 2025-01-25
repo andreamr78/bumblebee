@@ -20,6 +20,12 @@
     margin-bottom: 15px;
     background-color: #FF4F4F;
     border-color: #FF4F4F;
+    color: white;
+}
+
+#login-btn a {
+    color: white;
+    text-decoration: none;
 }
 
 #signup-link{
@@ -35,6 +41,10 @@
 
 #hero-img{
    height: 70vh;
+}
+
+#signup-link a {
+    text-decoration: none;
 }
 
 @media (max-width: 780px){
