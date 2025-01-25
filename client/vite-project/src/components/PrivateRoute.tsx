@@ -4,7 +4,7 @@ const PrivateRoute = ({ children }: { children: JSX.Element }) => {
   // Check if the user is authenticated
   const token = localStorage.getItem('token');
   // If the user is authenticated, render the children
-  return token ? children : <Navigate to="/dashboard" />;
+  return token ? children : <Navigate to="/" />;
 };
 
 export default PrivateRoute;
