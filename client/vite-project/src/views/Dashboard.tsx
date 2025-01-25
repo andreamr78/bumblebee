@@ -31,20 +31,22 @@ function Dashboard() {
   return (
     <div>
        <div className="dashboard-container">
-          <Row>
+          <Row className="h-100">
+
             <Col className="sidebar-col" lg={2}><Sidebar/></Col>
-            <Col className="topbar-col"> <Topbar name={name}/>
-             <div className="content-div d-flex justify-content-center h-75 align-items-center">
+
+            <Col className="topbar-col justify-content-between"> <Topbar name={name}/>
+             <div className="content-div d-flex h-75 flex-wrap flex-grow-1 overflow-auto" id="dashboard-content">
               {movieLike.length !== 0 ? 
                 movieLike.map((movie, i)=> {
                   return(
                   <div key={i}>
-                    <MainMovieCard props={movie}/>
+                    <MainMovieCard props={movie} className="MainMovieCard"/>
                   </div>
                   )
                 })
               : 
-              <div>
+              <div className="no-likes d-flex flex-column align-items-center justify-content-center">
                 <p>No Likes yet?</p>
                 <Link id="swipe-link" to={'/swipe'}>Start Swiping</Link>
               </div>
