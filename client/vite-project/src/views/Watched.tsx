@@ -18,7 +18,7 @@ function Watched() {
           <Row>
             <Col className="sidebar-col" lg={2}><Sidebar/></Col>
             <Col className="topbar-col"> <Topbar name={name}/>
-             <div className="content-div d-flex justify-content-center h-75 align-items-center">
+             <div className="content-div d-flex h-75 flex-wrap flex-grow-1 overflow-auto" id="dashboard-content">
              {movieWatch.length !== 0 ? 
                 movieWatch.map((movie, i)=> {
                   return(
