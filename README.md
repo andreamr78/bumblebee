@@ -13,16 +13,16 @@
 Cinematch is a web application that allows users to swipe through movies, like or dislike them, and keep track of their favorite movies. The application uses a PostgreSQL database for user authentication and movie data storage, and it integrates with The Movie Database (TMDb) API to fetch movie information.
 
 ## Installation
-Before starting the following instructions, make sure you have Node.js installed. You can download it from the following link [Node.js](https://nodejs.org/).<br><br>1.Clone the repository to your local machine: git clone https://github.com/andreamr78/bumblebee.git<br><br>2.Navigate to your local repository using the command line: cd your-local-repository<br><br>3.Install the required npm package: npm install<br><br>4.Set up the PostgreSQL database: Login to your postgres and run the schema.sql file.<br><br>5.Create a .env file in the root directory and add the following environment variables:<br>
----Server env---
-DB_HOST=localhost
-DB_PORT=5432
-DB_USER=postgres
-DB_PASSWORD=your_password
-JWT_SECRET=your_jwt_secret
+Before starting the following instructions, make sure you have Node.js installed. You can download it from the following link [Node.js](https://nodejs.org/).<br><br>1.Clone the repository to your local machine: git clone https://github.com/andreamr78/bumblebee.git<br><br>2.Navigate to your local repository using the command line: cd your-local-repository<br><br>3.Install the required npm package: npm install<br><br>4.Set up the PostgreSQL database: Login to your postgres and run the schema.sql file.<br><br>5.Create a .env file in the root directory and add the following environment variables:<br><br>
+---Server env---<br>
+DB_HOST=localhost<br>
+DB_PORT=5432<br>
+DB_USER=postgres<br>
+DB_PASSWORD=your_password<br>
+JWT_SECRET=your_jwt_secret<br>
 
----Client env---
-MOVIE_API_KEY=your_tmdb_api_key
+---Client env---<br>
+MOVIE_API_KEY=your_tmdb_api_key<br>
 
 ## Usage
 1.Run the project: npm run start<br><br>2.Open the app on your browser<br><br>3.Use the responsive UI to swipe sign up, login, swipe through movies, and review your watched movies.
