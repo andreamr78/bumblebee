@@ -38,4 +38,4 @@ There is currently no testing in the project. Testing will be a future feature.<
 See more about this license here, [MIT](https://mit-license.org/?form=MG0AV3)
 
 ## Questions
-For any questions or comments, please feel free to contact me us GitHub. You can also find more of our work at [RodMP-Creative](https://github.com/RodMP-Creative), [andreamr78](https://github.com/andreamr78), [mikealiaga](https://github.com/mikealiaga), [GusCastMorf](https://github.com/GusCastMorf).
+For any questions or comments, please feel free to contact us GitHub. You can also find more of our work at [RodMP-Creative](https://github.com/RodMP-Creative), [andreamr78](https://github.com/andreamr78), [mikealiaga](https://github.com/mikealiaga), [GusCastMorf](https://github.com/GusCastMorf).
