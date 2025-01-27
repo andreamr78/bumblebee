@@ -15,18 +15,13 @@ function Dashboard() {
   const [movieLike, setMovieLike] = useState([])
 
   useEffect(() => {
+    setName(localStorage.getItem('user'));
+  }, []);
+
+  useEffect(() => {
     setMovieLike(JSON.parse(localStorage.getItem('movieposterLike') || '{}'));
     setName(JSON.parse(localStorage.getItem('user') || '{}'));
   }, [])
-
-  // const getUsername = async () => {
-  //   try {
-  //     const response = await axios.get('http://localhost:3001/api/auth/signup');
-  //     setName(response.username);
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // };
   
 
   return (
