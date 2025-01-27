@@ -8,7 +8,14 @@
     "sequelize": "^6.37.5"
   },
   "devDependencies": {
+    "concurrently": "^9.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.7.3"
+  },
+  "scripts": {
+    "install": "cd client/vite-project && npm install && cd ../../server && npm install",
+    "start": "npm run build && npm run dev",
+    "build": "cd client/vite-project && npm run build && cd ../../server && npm run build",
+    "dev": "concurrently \"cd client/vite-project && npm run dev\" \"cd server && npm run dev\""
   }
 }
