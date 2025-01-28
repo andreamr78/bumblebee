@@ -17,7 +17,7 @@ app.use(express.json());
 connectDB();
 // Define the /api/auth route
 app.use('/api/auth', routes);
-
+app.use(express.static('../client/dist'));
 // Start the server
 sequelize.sync().then(() => {
   app.listen(PORT, () => {
