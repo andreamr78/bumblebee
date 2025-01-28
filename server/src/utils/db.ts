@@ -12,12 +12,26 @@ const dbPassword = process.env.DB_PASSWORD || 'password';
 const dbName = process.env.DB_NAME || 'database';
 
 // Initialize a new Sequelize instance
-const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
-    host: dbHost,
-    port: Number(dbPort),
-    dialect: 'postgres',
-    logging: false,
-});
+// const sequelize = new Sequelize(dbName, dbUser, dbPassword, {
+//     host: dbHost,
+//     port: Number(dbPort),
+//     dialect: 'postgres',
+//     logging: false,
+// });
+let sequelize;
+if (process.env.DB_URL) {
+     sequelize = new Sequelize(process.env.DB_URL);
+  } else {
+     sequelize = new Sequelize(
+        dbName, dbUser, dbPassword,
+      {
+        host: dbHost,
+        port: Number(dbPort),
+        dialect: 'postgres',
+        logging: false,
+      },
+    );
+  }
 
 // Define the connectDB function
 export const connectDB = async () => {
