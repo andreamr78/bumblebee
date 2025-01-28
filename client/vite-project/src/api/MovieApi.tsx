@@ -17,6 +17,7 @@ async function MovieApi() {
           throw new Error(`Response status: ${response.status}`);
         }
         const json = await response.json();
+        console.log(json.results);
         return json.results;
       } catch (error) {
         console.log(error);

@@ -44,6 +44,7 @@ function Swipe() {
   const onNextClick = (selectedData: any) => {
     ref.current?.next();
     var moviePoster = `${baseImgUrl}/${size}${selectedData}`;
+    console.log(moviePoster);
     setArrayMoviesLiked([...arrayMoviesLiked, moviePoster]);
     // console.log(`${baseImgUrl}/${size}${selectedData}`);
   };
@@ -51,6 +52,7 @@ function Swipe() {
   const watched = (selectedData: any) => {
     ref.current?.next();
     var moviePoster = `${baseImgUrl}/${size}${selectedData}`;
+    console.log(moviePoster);
     setArrayMoviesWatched([...arrayMoviesWatched, moviePoster]);
     // console.log(`${baseImgUrl}/${size}${selectedData}`);
   }
