@@ -18,7 +18,7 @@ const dbName = process.env.DB_NAME || 'database';
 //     dialect: 'postgres',
 //     logging: false,
 // });
-let sequelize;
+let sequelize: Sequelize;
 if (process.env.DB_URL) {
      sequelize = new Sequelize(process.env.DB_URL);
   } else {
