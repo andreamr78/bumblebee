@@ -17,7 +17,7 @@ app.use(express.json());
 connectDB();
 // Define the /api/auth route
 app.use('/api/auth', routes);
-app.use(express.static('../client/dist'));
+app.use(express.static('.../client/vite-project/dist'));
 // Start the server
 sequelize.sync().then(() => {
   app.listen(PORT, () => {
