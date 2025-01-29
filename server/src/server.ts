@@ -12,12 +12,12 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 
 // Enable the use of the JSON body parser
+app.use(express.static('../client/vite-project/dist'));
 app.use(express.json());
 // Connect to the database and start the server
 connectDB();
 // Define the /api/auth route
 app.use('/api/auth', routes);
-
 // Start the server
 sequelize.sync().then(() => {
   app.listen(PORT, () => {
