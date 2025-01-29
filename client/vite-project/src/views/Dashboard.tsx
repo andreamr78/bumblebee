@@ -60,7 +60,7 @@ function Dashboard() {
               }
              </div>
              <div className="swipe-button-mobile fixed-bottom d-flex justify-content-center align-items-center mb-3">
-              <button id="swipe-button"><Link id="swipe-link" to='/swipe'>Start Swiping<i className="bi bi-arrow-right"></i></Link></button>
+              <Link id="swipe-link" to='/swipe'><button id="swipe-button">Start Swiping<i className="bi bi-arrow-right"></i></button></Link>
              </div>
             </Col>
           </Row>
