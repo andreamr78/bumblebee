@@ -4,7 +4,7 @@ import { Button, Col, Container, Form, Row } from 'react-bootstrap';
 import logo from '../assets/Logo.svg';
 import UI_hero from '../assets/UI_Hero.png';
 import '../styles/LoginStyles.css';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -51,7 +51,7 @@ function Login() {
                 </Button>
               </Form>
               
-              <p className='mt-3'>Don't have an account? <a href="/signup" id='signup-link'>Sign up here!</a></p>
+              <p className='mt-3'>Don't have an account? <Link to="/signup" id='signup-link'>Sign up here!</Link></p>
             </div>
           </Col>
           <Col className='login-right'>
