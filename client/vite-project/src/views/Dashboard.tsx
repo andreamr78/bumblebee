@@ -55,12 +55,12 @@ function Dashboard() {
               : 
               <div className="no-likes d-flex flex-column align-items-center justify-content-center">
                 <p>No Likes yet?</p>
-                <Link id="swipe-link" to={'/swipe'}>Start Swiping</Link>
+                <Link id="swipe-link" to='/swipe'>Start Swiping</Link>
               </div>
               }
              </div>
              <div className="swipe-button-mobile fixed-bottom d-flex justify-content-center align-items-center mb-3">
-              <button id="swipe-button"><Link id="swipe-link" to={'/swipe'}>Start Swiping</Link> <i className="bi bi-arrow-right"></i></button>
+              <button id="swipe-button"><Link id="swipe-link" to='/swipe'>Start Swiping</Link> <i className="bi bi-arrow-right"></i></button>
              </div>
             </Col>
           </Row>

@@ -18,6 +18,15 @@ function Signup() {
     //console.log('Request Body:', requestBody);
     try {
       const response = await axiosInstance.post('/auth/signup', requestBody);
+     /*
+      const response = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(requestBody)
+      } );
+       */
       alert(response.data.message);
       navigate('/');
     } catch (error) {
