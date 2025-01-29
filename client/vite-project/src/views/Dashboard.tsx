@@ -2,7 +2,7 @@
 import Row from "react-bootstrap/esm/Row"
 import Sidebar from "../components/Sidebar"
 import Topbar from "../components/Topbar"
-import { Col } from "react-bootstrap"
+import { Col, Button } from "react-bootstrap"
 import '../styles/ComponentsStyles.css'
 import { Link } from "react-router-dom"
 //import MovieApi from "../api/MovieApi"
@@ -60,7 +60,7 @@ function Dashboard() {
               }
              </div>
              <div className="swipe-button-mobile fixed-bottom d-flex justify-content-center align-items-center mb-3">
-              <Link id="swipe-link" to='/swipe'><button id="swipe-button">Start Swiping<i className="bi bi-arrow-right"></i></button></Link>
+              <Link id="swipe-link" to='/swipe'><Button id="swipe-button">Start Swiping<i className="bi bi-arrow-right"></i></Button></Link>
              </div>
             </Col>
           </Row>
