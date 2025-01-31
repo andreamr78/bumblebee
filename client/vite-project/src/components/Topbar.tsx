@@ -19,7 +19,7 @@ function Topbar(props:any) {
                 <Navbar.Brand href="/">  
                   <h4 id="welcome-text">Welcome <a href="">{name?.username}</a></h4>
                 </Navbar.Brand>
-                <button id="swipe-button"><a href="/swipe">Start swiping!</a> <i className="bi bi-arrow-right"></i></button>
+                <button id="swipe-button"><Link to="/swipe">Start swiping!<i className="bi bi-arrow-right"></i></Link></button>
             </Navbar>
       </Container> 
       
